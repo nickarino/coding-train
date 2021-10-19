@@ -13,7 +13,7 @@ let bob;
 let len;
 let origin;
 
-let gravity = 1;
+let gravity = 1;~
 
 function setup() {
   createCanvas(600, 800);
