@@ -193,6 +193,18 @@ contributions:
     author: "Drea007"
     url: https://editor.p5js.org/Drea007/full/ICxxEXm69
     source: https://editor.p5js.org/Drea007/sketches/ICxxEXm69
+  - title: "Neon Digital (inspired by one of Maeda's 12 o'clocks)"
+    author: "Bixbite"
+    url: https://preview.p5js.org/Bixbite/present/0fKTF6EnX
+    source: https://editor.p5js.org/Bixbite/sketches/0fKTF6EnX
+  - title: "Fractal Clock - a combination of this coding challenge and CC14"
+    author: "LoganDungeon"
+    url: https://editor.p5js.org/LoganDungeon/present/_6kYTtiJZ
+    source: https://editor.p5js.org/LoganDungeon/sketches/_6kYTtiJZ
+  - title: "Rubik's clock!"
+    author: "Simon (& abhay color change)"
+    url: https://editor.p5js.org/aabhay.kashyap/full/mIJWfElwi
+    source: https://editor.p5js.org/aabhay.kashyap/sketches/mIJWfElwi
 ---
 
 In this coding challenge, I attempt to program a clock in HTML5 canvas with the p5.js library.

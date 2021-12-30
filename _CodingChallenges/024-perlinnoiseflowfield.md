@@ -66,6 +66,12 @@ contributions:
       name: "Peikai Tan"
       url: "https://catkane-doodles.github.io/perlin-flow-field/"
     source: "https://github.com/catkane-doodles/perlin-flow-field"
+  - title: "Processing Logo Flowfield"
+    author:
+      name: "Denisovich"
+      url: "https://DenisovichDev.github.io/link-tree/"
+    url: "https://openprocessing.org/sketch/1247705/"
+    source: "https://github.com/DenisovichDev/weekly-challenge/tree/main/p5logo"
 ---
 
 In this coding challenge, I use Perlin noise to create a two-dimensional flow field with the p5.js library
