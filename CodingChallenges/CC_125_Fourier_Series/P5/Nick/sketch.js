@@ -5,7 +5,8 @@
 // https://editor.p5js.org/codingtrain/sketches/SJ02W1OgV
 
 let time = 0;
-let wave = [];
+let wave = []; //array
+let timeWarpSpeed = 5;
 
 let slider;
 
@@ -27,10 +28,23 @@ function draw() {
 
   let x = radius * cos(time);
   let y = radius * sin(time);
+  wave.unshift(y); //in javascript wave.push appends while wave.unshift puts it at the beginnig
+
   fill(255);
   ellipse(x, y, 8);
   line(0, 0, x, y)
 
-  time = time + .01;
+  beginShape();
+    translate(200, 0);
+    line(x - 200, y, 0, wave[0]);
+    noFill();
+    for (let i = 0; i < wave.length; i++) {
+      vertex(i, wave[i]);
+    }
+    if (wave.length >400){ wave.pop()}
+  endShape();
+
+  time = time + timeWarpSpeed * .01;
+
 
 }
