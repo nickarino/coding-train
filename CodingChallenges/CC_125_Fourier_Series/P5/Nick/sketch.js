@@ -23,12 +23,13 @@ function draw() {
 
 
   let radius = 100;
-  ellipse(0,0, radius *2);
+  ellipse(0, 0, radius * 2);
 
   let x = radius * cos(time);
   let y = radius * sin(time);
   fill(255);
-  ellipse(x ,y ,8);
+  ellipse(x, y, 8);
+  line(0, 0, x, y)
 
   time = time + .01;
 
