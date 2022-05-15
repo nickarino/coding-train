@@ -19,39 +19,49 @@ function setup() {
 }
 
 function draw() {
+
+//draw first circle
+beginShape();
   //set up the object properties
   background(0);
   translate(xTranslate, yTranslate);
   stroke("white");
   noFill();
-
-
-  let radius = xTranslate -50; //a little distance from left edge
+  let n = 1;
+  let multForCircle = 75;
+  radius =  multForCircle * (4 / (n * PI));
   ellipse(0, 0, radius * 2);
+endShape();
 
-  //The angle of the arc = central angle = time
-  // A unit circle cos(theta) = adjacent/hypotenuse = x/1 = x
-  // A unit circl sin(theta) = opposite/hypotenuse = y/1 = y
-  //normalize by radius: multiply. 
-  let x = radius * cos(time);
-  let y = radius * sin(time);
-  wave.unshift(y); //in javascript wave.push appends while wave.unshift puts it at the beginnig
+//The angle of the arc = central angle = time
+// A unit circle cos(theta) = adjacent/hypotenuse = x/1 = x
+// A unit circl sin(theta) = opposite/hypotenuse = y/1 = y
+//normalize by radius: multiply. 
 
+let x = radius * cos(n * time);
+let y = radius * sin(n * time);
+
+wave.unshift(y); //in javascript wave.push appends while wave.unshift puts it at the beginnig
+
+//draw the rotating radius with a dot at the end. 
+beginShape();
   fill("white");
   ellipse(x, y, 8);
   line(0, 0, x, y)
+endShape();
 
-  beginShape();
-    let moveRight = 200;
-    translate(moveRight, 0);
-    line(x - moveRight, y, 0, wave[0]);
-    noFill();
-    for (let i = 0; i < wave.length; i++) {
-      vertex(i, wave[i]);
-    }
-    // do not need the array to belonger than 
-    if (wave.length > 400) { wave.pop(); }
-  endShape();
+//draw the sine wave
+beginShape();
+  let moveRight = 200;
+  translate(moveRight, 0);
+  line(x - moveRight, y, 0, wave[0]);
+  noFill();
+  for (let i = 0; i < wave.length; i++) {
+    vertex(i, wave[i]);
+  }
+  // do not need the array to belonger than 
+  if (wave.length > 400) { wave.pop(); }
+ endShape();
 
   time = time + timeWarpSpeed * .01;
 
