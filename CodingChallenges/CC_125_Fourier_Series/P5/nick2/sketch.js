@@ -4,10 +4,6 @@
 // https://youtu.be/Mm2eYfj0SgA
 // https://editor.p5js.org/codingtrain/sketches/SJ02W1OgV
 
-// Although time is measured by the decay of the number of atoms 
-// https://www.timeanddate.com/time/how-do-atomic-clocks-work.html
-// 9 billion, 192 million, 631 thousand, 770 times.
-
 let time = 0;
 let wave = [];
 let canvasWidth = 600;
