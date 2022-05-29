@@ -24,7 +24,7 @@ function draw() {
 
 //draw a circle
 beginShape();
-  //translate(canvasWidth/3,canvasHeight/3);
+  translate(canvasWidth/3,canvasHeight/3);
   //PI = C/d => C = Pi * d = PI * 2 * r  
   noFill();
   stroke("white");
@@ -37,9 +37,19 @@ beginShape();
   // On a unit circle, cos(theta) = adjacent/hypotenuse = adj/radius = x/1 = x.  So a circle of r radius x = r cos(theta)
   // On a unit circle sin(theta) = opposite/hypotenuse = opp/radius = y/1 = y.  So a circle of r radius y = r sin(theta)
   //normalize by radius: multiply. 
-  let x = radius * cos(20);
-  let y = radius * sin(20);
+  let x = radius * cos(19);
+  let y = radius * sin(19);
   line(0, 0, x, y);
+
+  x = radius * cos(20);
+  y = radius * sin(20);
+  line(0, 0, x, y);
+
+  x = radius * cos(21);
+  y = radius * sin(21);
+  line(0, 0, x, y);
+
+
 
 endShape();
 
