@@ -4,6 +4,20 @@
 // https://youtu.be/Mm2eYfj0SgA
 // https://editor.p5js.org/codingtrain/sketches/SJ02W1OgV
 
+
+/*
+
+Links discussed in this video:
+Fourier Series: https://en.wikipedia.org/wiki/Fourier_series
+🔗 Purrier Series (Meow) and Making Images Speak: https://bilimneguzellan.net/en/purrier-series-meow-and-making-images-speak/
+🔗 An Interactive Guide To The Fourier Transform by Better Explained: https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/
+
+🎥 What is a Fourier Series? - Smarter Every Day 205: https://youtu.be/ds0cmAV-Yek
+🎥 But what is the Fourier Transform? A visual introduction by 3Blue1Brown: https://youtu.be/spUNpyF58BY
+🎥 Polar Coordinates: https://youtu.be/N633bLi_YCw
+🎥 Fractal Spirograph: https://youtu.be/0dwJ-bkJwDI
+*/
+
 let time = 0; //unit = number of times it goes through "draw" method: clock speed
 let wave = []; //array
 let timeWarpSpeed = 5; //constant
