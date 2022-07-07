@@ -18,6 +18,8 @@ Fourier Series: https://en.wikipedia.org/wiki/Fourier_series
 🎥 Fractal Spirograph: https://youtu.be/0dwJ-bkJwDI
 */
 
+//whole goal of this is to do this page https://upload.wikimedia.org/wikipedia/commons/b/bd/Fourier_series_square_wave_circles_animation.svg
+
 let time = 0; //unit = number of times it goes through "draw" method: clock speed
 let wave = []; //array
 let timeWarpSpeed = 5; //constant

@@ -1,0 +1,5 @@
+Make sketch.js of 
+/Users/nick/devHelp/codingTrain/CodingChallenges/CC_125_Fourier_Series/P5/sketch.js
+
+Then go to #130
+

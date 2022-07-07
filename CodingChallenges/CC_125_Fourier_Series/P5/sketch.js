@@ -4,6 +4,8 @@
 // https://youtu.be/Mm2eYfj0SgA
 // https://editor.p5js.org/codingtrain/sketches/SJ02W1OgV
 
+//https://www.desmos.com/calculator/a1t9doewcm
+
 let time = 0;
 let wave = [];
 
@@ -15,6 +17,8 @@ function setup() {
 }
 
 function draw() {
+  fill("black");
+  //text("red", slider.x + slider.width, slider.y + slider.width);
   background(0);
   translate(150, 200);
 
