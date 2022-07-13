@@ -16,8 +16,23 @@ function dft(x) {
     // we typically you average the contribution
     re = re / N;
     im = im / N;
+
+
+    //     For a circular epicycle, we need
+    // * amplitude - the radius of that circle. 
+    // * frequency - how many cycles through the circle does it rotate per unit of time
+    // * Phase- another way is think of it as an offset: Where does the cycle begin? Where does that circular wave pattern begin?
+
+    // The secret lies in the idea that a complex number a + bi is like a vector
+    // the length of vector = amplitude = radius
+    // the angle of the vector is the phase.  
+
+    let freq = k; // this is k in the formula from wikipedia
+    let amp = sqrt(re * re + im * im); // magnitude of the vector
+    let phase = atan2(im, re);
+
     //use enhanced object literals 
-    X[k] = { re, im };
+    X[k] = { re, im, freq, amp, phase };
   }
 
   return X;
