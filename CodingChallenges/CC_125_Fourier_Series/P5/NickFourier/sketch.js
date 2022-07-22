@@ -6,7 +6,10 @@ let fourierY; //transform of y
 function setup() {
   createCanvas(600, 400);
   //square wave. 
-  y = [100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100]
+  //y = [100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100]
+  for(let i = 0; i<100;i++){
+    y[i] = random(-100, 100);
+  }
   fourierY = dft(y);
 }
 
@@ -27,8 +30,8 @@ function draw() {
     let freq = fourierY[i].freq;  //time it takes to do one rotation around
     let radius = fourierY[i].amp; //radius is the amplitude
     let phase = fourierY[i].phase; //offset from origin
-    x += radius * cos(freq * time + phase);
-    y += radius * sin(freq * time + phase);
+    x += radius * cos(freq * time + phase + HALF_PI);
+    y += radius * sin(freq * time + phase + HALF_PI);
 
     stroke(255, 100);
     noFill();
