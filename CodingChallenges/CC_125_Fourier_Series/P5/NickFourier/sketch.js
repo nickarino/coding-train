@@ -44,7 +44,7 @@ function epiCycles(x, y, rotation, fourier) {
 function draw() {
   fill("black");
   background(0);
-  epiCycles(100,200, HALF_PI, fourierX);
+  epiCycles(100,200, 0, fourierX);
   epiCycles(300,200,HALF_PI, fourierY);
   
   wave.unshift(y);
