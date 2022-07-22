@@ -24,27 +24,17 @@ function draw() {
     let prevy = y;
 
     //https://youtu.be/MY4luNgGfms?t=1481
-    let freq = fourierY.freq;  //time it takes to do one rotation around
-    let radius = fourierY.amp; //radius is the amplitude
-    let phase = fourierY.phase; //offset from origin
+    let freq = fourierY[i].freq;  //time it takes to do one rotation around
+    let radius = fourierY[i].amp; //radius is the amplitude
+    let phase = fourierY[i].phase; //offset from origin
     x += radius * cos(freq * time + phase);
     y += radius * sin(freq * time + phase);
 
     stroke(255, 100);
-
-    beginShape();
     noFill();
-    for(let i=0;i<wave.length;i++){
-      vertex(i, wave[i]);
-    }
-    endShape();
-    //https://youtu.be/MY4luNgGfms?t=1583
-
-
-
+    ellipse(prevx, prevy, radius *2);
     stroke(255);
     line(prevx, prevy, x, y);
- 
   }
   wave.unshift(y);
 
@@ -57,9 +47,14 @@ function draw() {
   }
   endShape();
 
-  time += 0.05;
+  //fourierY.length = number of frequency values I have
+  const dt = TWO_PI/ fourierY.length //the length I move each cycle
+  time += dt;
 
   if (wave.length > 250) {
     wave.pop();
   }
+  
 }
+
+
