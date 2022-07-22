@@ -8,10 +8,9 @@ function setup() {
   createCanvas(600, 400);
   //square wave. 
   //y = [100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100]
-  let angle = 0;
+  
   for(let i = 0; i<100;i++){
-    y[i] = 100 * noise(angle) - 50;
-    angle += 0.02;
+    y[i] = i;
   }
   //take any arbitrary signal
   fourierY = dft(y);
