@@ -3,14 +3,19 @@ let wave = [];
 let y = []; // my square wave
 let fourierY; //transform of y
 
+
 function setup() {
   createCanvas(600, 400);
   //square wave. 
   //y = [100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100]
+  let angle = 0;
   for(let i = 0; i<100;i++){
-    y[i] = random(-100, 100);
+    y[i] = 100 * noise(angle) - 50;
+    angle += 0.02;
   }
+  //take any arbitrary signal
   fourierY = dft(y);
+  console.log(y);
 }
 
 function draw() {
