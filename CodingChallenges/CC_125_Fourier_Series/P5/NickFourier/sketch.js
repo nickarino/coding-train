@@ -25,32 +25,32 @@ function setup() {
 
 }
 
-function draw() {
-  fill("black");
-  background(0);
-  translate(150, 200);
-
-  let x = 0;
-  let y = 0;
-
-  //https://youtu.be/MY4luNgGfms?t=454
-  for (let i = 0; i < fourierY.length; i++) {
+function epiCycles(x, y, rotation, fourier) {
+  for (let i = 0; i < fourier.length; i++) {
     let prevx = x;
     let prevy = y;
-
-    //https://youtu.be/MY4luNgGfms?t=1481
-    let freq = fourierY[i].freq;  //time it takes to do one rotation around
-    let radius = fourierY[i].amp; //radius is the amplitude
-    let phase = fourierY[i].phase; //offset from origin
-    x += radius * cos(freq * time + phase + HALF_PI);
-    y += radius * sin(freq * time + phase + HALF_PI);
+    let freq = fourier[i].freq;
+    let radius = fourier[i].amp;
+    let phase = fourier[i].phase;
+    x += radius * cos(freq * time + phase + rotation);
+    y += radius * sin(freq * time + phase + rotation);
 
     stroke(255, 100);
     noFill();
-    ellipse(prevx, prevy, radius *2);
+    ellipse(prevx, prevy, radius * 2);
     stroke(255);
     line(prevx, prevy, x, y);
   }
+  return createVector(x, y);
+}
+
+
+function draw() {
+  fill("black");
+  background(0);
+  epiCycles(100,200, HALF_PI, fourierX);
+  epiCycles(300,200,HALF_PI, fourierY);
+  
   wave.unshift(y);
 
   translate(200, 0);
