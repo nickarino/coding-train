@@ -10,17 +10,13 @@ function setup() {
   createCanvas(600, 400);
   //square wave. 
   //y = [100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100]
-  
+  let angle = 0;
   for(let i = 0; i<100;i++){
-    y[i] = i;
+    angle = map(i,0,100,0,  TWO_PI);
+    x[i] = 100 * cos(angle);
+    y[i] = 100 * sin(angle);
   }
-  //take any arbitrary signal
   fourierY = dft(y);
-  //console.log(y);
-  for(let i = 0; i<100;i++){
-    x[i] = i;
-  }
-  //take any arbitrary signal
   fourierX = dft(x);
 
 }
