@@ -1,7 +1,9 @@
 let time = 0;
 let wave = [];
-let y = []; // my square wave
+let y = []; // input
 let fourierY; //transform of y
+let x = []; // input
+let fourierX; //transform of y
 
 
 function setup() {
@@ -14,7 +16,13 @@ function setup() {
   }
   //take any arbitrary signal
   fourierY = dft(y);
-  console.log(y);
+  //console.log(y);
+  for(let i = 0; i<100;i++){
+    x[i] = i;
+  }
+  //take any arbitrary signal
+  fourierX = dft(x);
+
 }
 
 function draw() {
