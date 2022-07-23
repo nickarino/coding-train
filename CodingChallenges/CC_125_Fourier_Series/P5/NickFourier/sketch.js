@@ -4,6 +4,7 @@ let y = []; // input
 let fourierY; //transform of y
 let x = []; // input
 let fourierX; //transform of y
+let path = [];
 
 
 function setup() {
@@ -13,8 +14,8 @@ function setup() {
   let angle = 0;
   for(let i = 0; i<100;i++){
     angle = map(i,0,100,0,  TWO_PI);
-    x[i] = 100 * cos(angle);
-    y[i] = 100 * sin(angle);
+    x[i] = 50 * cos(angle);
+    y[i] = 50 * sin(angle);
   }
   fourierY = dft(y);
   fourierX = dft(x);
@@ -37,6 +38,7 @@ function epiCycles(x, y, rotation, fourier) {
     stroke(255);
     line(prevx, prevy, x, y);
   }
+  //last x and y
   return createVector(x, y);
 }
 
@@ -44,17 +46,17 @@ function epiCycles(x, y, rotation, fourier) {
 function draw() {
   fill("black");
   background(0);
-  epiCycles(100,200, 0, fourierX);
-  epiCycles(300,200,HALF_PI, fourierY);
-  
-  wave.unshift(y);
+  let vx = epiCycles(400,50, 0, fourierX);
+  let vy = epiCycles(50,200,HALF_PI, fourierY);
+  let v = createVector(vx.x, vy.y);
+  path.unshift(v);
+  line(vx.x, vx.y, v.x, v.y);
+  line(vy.x, vy.y, v.x, v.y);
 
-  translate(200, 0);
-  line(x - 200, y, 0, wave[0]);
   beginShape();
   noFill();
-  for (let i = 0; i < wave.length; i++) {
-    vertex(i, wave[i]);
+  for (let i = 0; i < path.length; i++) {
+    vertex(path[i].x, path[i].y);
   }
   endShape();
 
@@ -62,9 +64,6 @@ function draw() {
   const dt = TWO_PI/ fourierY.length //the length I move each cycle
   time += dt;
 
-  if (wave.length > 250) {
-    wave.pop();
-  }
   
 }
 
