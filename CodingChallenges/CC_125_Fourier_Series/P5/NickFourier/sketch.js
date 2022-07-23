@@ -9,13 +9,9 @@ let path = [];
 
 function setup() {
   createCanvas(600, 400);
-  //square wave. 
-  //y = [100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100, 100, 100, 100, -100, -100, -100]
-  let angle = 0;
   for(let i = 0; i<100;i++){
-    angle = map(i,0,100,0,  TWO_PI);
-    x[i] = 50 * cos(angle);
-    y[i] = 100 * sin(angle);
+    x[i] = 150 * noise(i/50);
+    y[i] = 150 * noise(i/50 + 1000);
   }
   fourierY = dft(y);
   fourierX = dft(x);
@@ -46,8 +42,8 @@ function epiCycles(x, y, rotation, fourier) {
 function draw() {
   fill("black");
   background(0);
-  let vx = epiCycles(400,50, 0, fourierX);
-  let vy = epiCycles(50,200,HALF_PI, fourierY);
+  let vx = epiCycles(300,100, 0, fourierX);
+  let vy = epiCycles(70,200,HALF_PI, fourierY);
   let v = createVector(vx.x, vy.y);
   path.unshift(v);
   line(vx.x, vx.y, v.x, v.y);
