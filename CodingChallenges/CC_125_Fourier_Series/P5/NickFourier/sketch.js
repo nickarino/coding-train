@@ -15,7 +15,7 @@ function setup() {
   for(let i = 0; i<100;i++){
     angle = map(i,0,100,0,  TWO_PI);
     x[i] = 50 * cos(angle);
-    y[i] = 50 * sin(angle);
+    y[i] = 100 * sin(angle);
   }
   fourierY = dft(y);
   fourierX = dft(x);
