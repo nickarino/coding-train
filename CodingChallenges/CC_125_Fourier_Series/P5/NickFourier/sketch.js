@@ -61,6 +61,25 @@ function draw() {
   time += dt;
 
   
+  //https://georgeyu.cn/viz/fourier-transform/  
+  //https://www.myfourierepicycles.com/ and https://github.com/trozler/myFourierEpicycles
+  //https://contra.medium.com/drawing-anything-with-fourier-series-using-blender-and-python-c0881e1b738c
+  //https://olgaritme.com/posts/drawing-with-the-fourier-series/index.html
+  // SVG creator use only black and white
+  // others https://caricaturer.io/  and https://imagetocartoon.com/
+
+/*
+https://twitter.com/messages/16655601-1694860814
+
+Hey! Let's say you have a SVG file containing a single continuous <path>, you should be able to extract the coordinates with something like this:
+
+const path = document.querySelector('path');
+const length = path.getTotalLength();
+const step = length / 100;
+for (let i = length - 1; i >= 0; i -= step) {
+    console.log(path.getPointAtLength(i)):
+}
+*/
 }
 
 
