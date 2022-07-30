@@ -5,6 +5,7 @@
 // https://thecodingtrain.com/CodingChallenges/130.3-fourier-transform-drawing.html
 // https://youtu.be/7_vKzcgpfvU
 // https://editor.p5js.org/codingtrain/sketches/ldBlISrsQ
+// 3B1B https://www.youtube.com/watch?v=spUNpyF58BY
 
 let x = [];
 let fourierX;
