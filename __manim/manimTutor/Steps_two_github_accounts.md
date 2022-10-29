@@ -40,4 +40,5 @@ Running  ssh-agent          OpenSSH Authentication Agent
  $env:GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_github_nickarino"
  ```
  
+ See the picture [here](https://ourdecisions-my.sharepoint.com/personal/nick_ourdecisions_com/_layouts/15/doc.aspx?sourcedoc={39c6f729-f50a-435d-89c5-fcd62a33a84d}&action=edit&or=PrevCreateNew&wdnewandopenct=0)
 
