@@ -146,5 +146,16 @@ contributions:
       url: "https://github.com/AyushKoul00"
     url: "https://editor.p5js.org/ayushkoul00/full/SYY6dGfm5"
     source: "https://editor.p5js.org/ayushkoul00/sketches/SYY6dGfm5"
+  - title: "Game of Life : Customizable grid"
+    author:
+      name: "Ashwath"
+      url: "https://github.com/Ash205"
+    url: "https://ash205.github.io/Game-of-life/"
+    source: "https://github.com/Ash205/Game-of-life"
+  - title: "LÖVE Game of life playground"
+    author:
+      name: "vinnyI-afk"
+      url: "https://github.com/vinnyI-afk"
+    source: "https://github.com/vinnyI-afk/lua-gol-playground"
 ---
 In this coding challenge, I attempt to code Conway's Game of Life cellular automata simulation in JavaScript using the p5.js library.

@@ -153,6 +153,18 @@ contributions:
       name: "Jacob Bender"
       url: "https://github.com/ThatBenderGuy"
     source: "https://github.com/ThatBenderGuy/ProcessingRayCasting"
+  - title: "Ray Casting W/ editable boundaries"
+    author:
+      name: "LOÏC RICO"
+      url: "https://github.com/ricoloic"
+    url: "https://rico.studio/sketches/ray-casting"
+    source: "https://github.com/ricoloic/personal-webpage/tree/master/src/routes/sketches/ray-casting"
+  - title: "Q-Learning Car Drives on a Track"
+    author:
+      name: "Codefish"
+      url: "https://editor.p5js.org/Codefish/sketches"
+    url: "https://editor.p5js.org/Codefish/full/MZHBctRM8"
+    source: "https://editor.p5js.org/Codefish/sketches/MZHBctRM8"
 videos:
   - title: "Coding Adventure: Ray Marching"
     author: "Sebastian Lague"
