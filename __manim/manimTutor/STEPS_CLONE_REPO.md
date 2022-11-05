@@ -1,9 +1,19 @@
+# Clone Manim-3b1b
+```
+git clone https://github.com/3b1b/manim.git
+--I get all branches
+--Create a new repo in github
+git add remote <new repo name>
+--when you create a new repo in git, it tells you the steps
+git push 
+```
+
 # Fork repo
 
 ## Clone fork to local
 
 ```
-$ git clone git@github.com:zavden/manim-3b1b.git
+$ git clone git@github.com:nickarino/manim-3b1b.git
 $ cd manim-3b1b
 ```
 
@@ -11,8 +21,8 @@ $ cd manim-3b1b
 
 ```
 $ git remote -v
-origin	git@github.com:zavden/manim-3b1b.git (fetch)
-origin	git@github.com:zavden/manim-3b1b.git (push)
+origin	git@github.com:nickarino/manim-3b1b.git (fetch)
+origin	git@github.com:nickarino/manim-3b1b.git (push)
 ```
 
 ## Add original repo to remote
@@ -27,8 +37,8 @@ $ git remote add grant https://github.com/3b1b/manim.git
 $ git remote -v
 grant	https://github.com/3b1b/manim.git (fetch)
 grant	https://github.com/3b1b/manim.git (push)
-origin	git@github.com:zavden/manim-3b1b.git (fetch)
-origin	git@github.com:zavden/manim-3b1b.git (push)
+origin	git@github.com:nickarino/manim-3b1b.git (fetch)
+origin	git@github.com:nickarino/manim-3b1b.git (push)
 ```
 
 ## Fetch grant repo
@@ -95,9 +105,9 @@ Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 remote: 
 remote: Create a pull request for 'cairo' on GitHub by visiting:
-remote:      https://github.com/zavden/manim-3b1b/pull/new/cairo
+remote:      https://github.com/nickarino/manim-3b1b/pull/new/cairo
 remote: 
-To github.com:zavden/manim-3b1b.git
+To github.com:nickarino/manim-3b1b.git
  * [new branch]        cairo -> cairo
 branch 'cairo' set up to track 'origin/cairo'.
 ```
