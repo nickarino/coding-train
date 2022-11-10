@@ -14,6 +14,16 @@ ssh-keygen.exe -b 4096 -t rsa -C "nick@ourdecsions.com" -f C:\Users\skriloffn\.s
 ssh-keygen -lf C:\Users\skriloffn\.ssh\id_rsa_github_nickarino.pub
 ```
 
+* Make sure the sha hash of the key is in my keystore
+```
+PS C:\dev> ssh-add -l 
+4096 SHA256:Qg86xZ37ErlRBV+iYybUawsJyEQzED6I4kzoe9S2Auo nick@ourdecsions.com (RSA)
+3072 SHA256:ZpdKAlSS3qZY1osvkj/tJG3XBNA7u/mYgQzOMegcBNk darden\skriloffn@SKRILOFFN-10L4 (RSA)
+PS C:\dev> ssh-keygen.exe -lf C:\Users\skriloffn\.ssh\id_rsa
+3072 SHA256:ZpdKAlSS3qZY1osvkj/tJG3XBNA7u/mYgQzOMegcBNk darden\skriloffn@SKRILOFFN-10L4 (RSA)
+
+```
+
 * To get the ssh agent running, you either 
 Git Bash, by default PowerShell does not have eval command enabled.
 ```
@@ -35,9 +45,14 @@ Running  ssh-agent          OpenSSH Authentication Agent
  ssh git@github.com   (Not username@github.com)
  ```
  
+ ```
+ssh -i C:\Users\skriloffn\.ssh\id_rsa_github_nickarino git@github.com
+```
+
+
  * For each command window session, set this
  ```
- $env:GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_github_nickarino"
+ $env:GIT_SSH_COMMAND="ssh -i C:\Users\skriloffn\.ssh\id_rsa_github_nickarino"
  ```
  
  See the picture [here](https://ourdecisions-my.sharepoint.com/personal/nick_ourdecisions_com/_layouts/15/doc.aspx?sourcedoc={39c6f729-f50a-435d-89c5-fcd62a33a84d}&action=edit&or=PrevCreateNew&wdnewandopenct=0)
