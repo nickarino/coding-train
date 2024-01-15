@@ -6,7 +6,6 @@ let x = []; // input
 let fourierX; //transform of y
 let path = [];
 
-
 function setup() {
   createCanvas(600, 400);
   for(let i = 0; i<100;i++){
@@ -38,7 +37,6 @@ function epiCycles(x, y, rotation, fourier) {
   return createVector(x, y);
 }
 
-
 function draw() {
   fill("black");
   background(0);
@@ -60,7 +58,6 @@ function draw() {
   const dt = TWO_PI/ fourierY.length //the length I move each cycle
   time += dt;
 
-  
   //https://georgeyu.cn/viz/fourier-transform/  
   //https://www.myfourierepicycles.com/ and https://github.com/trozler/myFourierEpicycles
   //https://contra.medium.com/drawing-anything-with-fourier-series-using-blender-and-python-c0881e1b738c
